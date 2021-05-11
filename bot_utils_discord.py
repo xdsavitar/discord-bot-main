@@ -1446,6 +1446,6 @@ async def on_message(message):
 	await client.process_commands(message)
 
 
-client.run("ODA4MDcwMzkyOTE2MjEzNzYw.YCBMMg.DcQW6JkwH9vFJYdYCnwSyc_ubzE")
+client.run("TOKEn")
 
 
