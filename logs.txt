@@ -128,3 +128,5 @@
 [2021-02-23 03:04:48.328005] alcoholic tsotsa#2929 Added Meme To The Server [813552118224781383] 
 [2021-02-23 03:05:03.220252] alcoholic tsotsa#2929 Added Meme To The Server [808457122454831114] 
 [2021-02-24 09:10:55.830484] alcoholic tsotsa#2929 Added Meme To The Server [813552118224781383] [2021-04-12 05:11:52.424496] Samurai Doggo#4648 Added Shitpost To The Server [808457122454831114] 
+[2021-05-13 05:05:11.561370] Savitar#4648 Added Meme To The Server [808457122454831114] 
+[2021-05-13 05:05:34.623705] Spaceo#3917 Added Shitpost To The Server [808457122454831114] 

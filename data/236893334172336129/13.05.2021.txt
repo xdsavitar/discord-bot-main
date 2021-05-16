@@ -1,0 +1,10 @@
+[SESSION] --> [1]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:05]| 
+[SESSION] --> [2]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:04]| 
+[SESSION] --> [3]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:12]| 
+[SESSION] --> [4]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:16:21]| 
+[SESSION] --> [5]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:03]| 
+[SESSION] --> [6]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:51]| 
+[SESSION] --> [7]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:13]| 
+[SESSION] --> [8]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:08:46]| 
+[SESSION] --> [9]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:12]| 
+[SESSION] --> [10]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [2:44:48]| 

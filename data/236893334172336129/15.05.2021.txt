@@ -1,0 +1,2 @@
+[SESSION] --> [1]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:03:20]| 
+[SESSION] --> [2]| [User] --> [Savitar#4648]| [TIME IN VOICE] --> [0:00:05]| 

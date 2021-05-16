@@ -1,0 +1,2 @@
+[SESSION] --> [1]| [User] --> [Spaceo#3917]| [TIME IN VOICE] --> [0:00:07]| 
+[SESSION] --> [2]| [User] --> [Spaceo#3917]| [TIME IN VOICE] --> [2:41:16]| 

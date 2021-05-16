@@ -1,0 +1,3 @@
+[SESSION] --> [1]| [User] --> [Kazu#0869]| [TIME IN VOICE] --> [0:29:50]| 
+[SESSION] --> [2]| [User] --> [Kazu#0869]| [TIME IN VOICE] --> [0:00:08]| 
+[SESSION] --> [3]| [User] --> [Kazu#0869]| [TIME IN VOICE] --> [0:59:32]| 

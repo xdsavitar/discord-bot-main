@@ -1,4 +1,5 @@
 import discord
+from discord import message
 import requests
 from discord.ext import commands
 import random
@@ -132,6 +133,7 @@ async def createwallet(ctx):
 		await ctx.send(f"<@{member_id}> You already have a wallet!")
 
 
+
 @client.command()
 async def vtime(ctx):
 	with open(f"C:/Users/xdSavitar/Desktop/Discord Bot/users/voice_time/{ctx.message.author.id}.txt","r") as read:
@@ -177,8 +179,44 @@ async def perm(ctx,message):
 			print("Rbuh")
 
 
+
+def collect_data(current_date,diff,id,guild,user):
+	voiceTime = "C:/Users/xdSavitar/Desktop/Discord Bot/users/voice_time/static_voice"
+	lines = 1
+	print(current_date,diff,id,guild)
+
+	curr = current_date.split("/")
+	full__name = f"{curr[0]}.{curr[1]}.{curr[2]}"
+
+	try:
+		os.mkdir(f"data/{id}")
+	except:
+		
+		try:
+
+			with open(f"data/{id}/{full__name}.txt","r") as read:
+				for line in read:
+					lines += 1
+		except:
+			pass
+
+	with open(f"data/{id}/{full__name}.txt","a") as write:
+		write.writelines(f"[SESSION] --> [{lines}]| [User] --> [{user}]| [TIME IN VOICE] --> [{diff}]| \n")
+		write.close()
+
+
+
+@client.command()
+async def math(ctx,func):
+	func = str(func)
+	await ctx.send(eval(func))
+
+
+
 @client.event
 async def on_voice_state_update(member, before, after):
+	print(after)
+	print(after.self_mute)
 	
 	with open(f"C:/Users/xdSavitar/Desktop/Discord Bot/server_settings/{member.guild.id}/voiceTrack.txt","r") as read:
 		state = read.readlines()
@@ -193,9 +231,13 @@ async def on_voice_state_update(member, before, after):
 
 		now = datetime.datetime.now()
 		current_time = now.strftime("%H:%M:%S")
-
+		current_date = now.strftime("%d/%m/%Y")
+		
 		print(current_time)
-		print(before.channel,after.channel)
+		print(before.channel)
+
+
+#self_mute=False self_deaf=False self_stream=False
 
 		if (before.channel == None):
 			print(f"User Joined The Channel {after.channel}")
@@ -203,10 +245,8 @@ async def on_voice_state_update(member, before, after):
 				File.writelines(f"{current_time}")
 				File.close()
 
-
-		elif (before.channel != None):
+		if (after.channel == None):
 			print("usr has left the channel")
-
 			if os.path.isfile(f"{tempPath}/{member.id}.txt") == True:
 
 				with open(f"{tempPath}/{member.id}.txt") as Read:
@@ -223,14 +263,13 @@ async def on_voice_state_update(member, before, after):
 					end_dt = datetime.datetime.strptime(end, '%H:%M:%S')
 					diff = (end_dt - start_dt)
 
+					collect_data(current_date,diff,member.id,member.guild.id,member)
 					print(diff)
 
-					
 					if os.path.isfile(f"{voiceTime}/{member.id}.txt") == False:
 						with open(f"{voiceTime}/{member.id}.txt","w") as write:
 							write.write(str(diff))
 
-					
 					else:
 						with open(f"{voiceTime}/{member.id}.txt","r") as wX:
 							time_current = wX.readlines()
@@ -249,11 +288,23 @@ async def on_voice_state_update(member, before, after):
 								write.close()
 
 
-
-				os.remove(f"{tempPath}/{member.id}.txt")
+			os.remove(f"{tempPath}/{member.id}.txt")
 
 	else:
 		pass
+
+
+
+#embed=discord.Embed(title="Data Request", description="Requested Data For The User")
+#embed.add_field(name="Ammount Of Time Spent In Voice", value="undefined", inline=True)
+#embed.add_field(name="Avrage Ammount Of Messages Per Day", value="undefined", inline=True)
+#embed.add_field(name="Most Active Days", value="test", inline=True)
+#await ctx.send(embed=embed)
+
+
+
+
+
 
 
 @client.command()
@@ -530,10 +581,6 @@ async def skip(ctx):
 
 def takeBalance():
 	pass
-
-
-
-
 
 
 @client.command()
@@ -1446,6 +1493,6 @@ async def on_message(message):
 	await client.process_commands(message)
 
 
-client.run("TOKEn")
+client.run("ODA4MDcwMzkyOTE2MjEzNzYw.YCBMMg.zBCD9GwyZ9Fv0QniY7Tb-JyA6So")
 
 
